@@ -1,13 +1,11 @@
-vim.opt.termguicolors = true
 
-function SetColor(color)
-    color = color or "onedark"
-    vim.cmd.colorscheme(color)
+function SetColor()
+	-- Option 1
+	-- vim.o.background = "dark"
+	-- vim.cmd([[colorscheme gruvbox]])	
 
-    -- vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-    -- vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
-    -- vim.api.nvim_set_hl(0, "ColorColumn", {bg = "none"})
-    -- vim.api.nvim_set_hl(0, "LineNr", {bg = "none"})
+	-- Option 2
+	vim.cmd.colorscheme "catppuccin"
 end
 
-SetColor('kanagawa-wave')
+SetColor()
